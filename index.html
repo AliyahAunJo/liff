@@ -52,14 +52,14 @@
       document.getElementById("universalLink2").append(link2)
     }
 
-    async function shareMsg() {
-      await liff.shareTargetPicker([
-        {
-          type: "text",
-          text: "This message was sent by ShareTargetPicker"
-        }
-      ])
-    }
+//     async function shareMsg() {
+//       await liff.shareTargetPicker([
+//         {
+//           type: "text",
+//           text: "This message was sent by ShareTargetPicker"
+//         }
+//       ])
+//     }
 
     function logOut() {
       liff.logout()
@@ -70,10 +70,10 @@
       liff.closeWindow()
     }
 
-    async function scanCode() {
-      const result = await liff.scanCodeV2()
-        document.getElementById("scanCode").append(result.value)
-    }
+//     async function scanCode() {
+//       const result = await liff.scanCodeV2()
+//         document.getElementById("scanCode").append(result.value)
+//     }
     
     function openWindow() {
       liff.openWindow({
@@ -82,28 +82,28 @@
       })
     }
 
-    async function getFriendship() {
-      const friend = await liff.getFriendship()
-      document.getElementById("friendship").append(friend.friendFlag)
-      if (!friend.friendFlag) {
-        if (confirm("คุณยังไม่ได้เพิ่ม Bot เป็นเพื่อน จะเพิ่มเลยไหม?")) {
-          window.location = "https://line.me/R/ti/p/@YOUR-BOT-ID"
-        }
-      }
-    }
+//     async function getFriendship() {
+//       const friend = await liff.getFriendship()
+//       document.getElementById("friendship").append(friend.friendFlag)
+//       if (!friend.friendFlag) {
+//         if (confirm("คุณยังไม่ได้เพิ่ม Bot เป็นเพื่อน จะเพิ่มเลยไหม?")) {
+//           window.location = "https://line.me/R/ti/p/@YOUR-BOT-ID"
+//         }
+//       }
+//     }
 
-    async function sendMsg() {
-      if (liff.getContext().type !== "none") {
-        await liff.sendMessages([
-          {
-            "type": "sticker",
-            "stickerId": 1,
-            "packageId": 1
-          }
-        ])
-        alert("Message sent")
-      }
-    }
+//     async function sendMsg() {
+//       if (liff.getContext().type !== "none") {
+//         await liff.sendMessages([
+//           {
+//             "type": "sticker",
+//             "stickerId": 1,
+//             "packageId": 1
+//           }
+//         ])
+//         alert("Message sent")
+//       }
+//     }
 
 //     function getContext() {
 //       if (liff.getContext() != null) {
