@@ -119,17 +119,17 @@
       const profile = await liff.getProfile()
       document.getElementById("pictureUrl").src = profile.pictureUrl
       document.getElementById("userId").append(profile.userId)
-      document.getElementById("statusMessage").append(profile.statusMessage)
-      document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
+      //document.getElementById("statusMessage").append(profile.statusMessage)
+     // document.getElementById("displayName").append(profile.displayName)
+      //document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
     
-    function getEnvironment() {
+    //function getEnvironment() {
 //       document.getElementById("os").append(liff.getOS())
 //       document.getElementById("language").append(liff.getLanguage())
 //       document.getElementById("version").append(liff.getVersion())
 //       document.getElementById("accessToken").append(liff.getAccessToken())
-      document.getElementById("isInClient").append(liff.isInClient())
+     // document.getElementById("isInClient").append(liff.isInClient())
 //       if (liff.isInClient()) {
 //         document.getElementById("btnLogOut").style.display = "none"
 //       } else {
@@ -137,13 +137,13 @@
 //         document.getElementById("btnScanCode").style.display = "none"
 //         document.getElementById("btnClose").style.display = "none"
 //       }
-    }
+   // }
 
     async function main() {
       liff.ready.then(() => {
         document.getElementById("isLoggedIn").append(liff.isLoggedIn())
         if (liff.isLoggedIn()) {
-          getEnvironment()
+         // getEnvironment()
           getUserProfile()
           //getContext()
           //getFriendship()
