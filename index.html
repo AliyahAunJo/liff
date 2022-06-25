@@ -43,14 +43,14 @@
 
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
-    function createUniversalLink() {
-      const link1 = liff.permanentLink.createUrl()
-      document.getElementById("universalLink1").append(link1)
+//     function createUniversalLink() {
+//       const link1 = liff.permanentLink.createUrl()
+//       document.getElementById("universalLink1").append(link1)
 
-      liff.permanentLink.setExtraQueryParam('param=9')
-      const link2 = liff.permanentLink.createUrl()
-      document.getElementById("universalLink2").append(link2)
-    }
+//       liff.permanentLink.setExtraQueryParam('param=9')
+//       const link2 = liff.permanentLink.createUrl()
+//       document.getElementById("universalLink2").append(link2)
+//     }
 
 //     async function shareMsg() {
 //       await liff.shareTargetPicker([
@@ -61,26 +61,26 @@
 //       ])
 //     }
 
-    function logOut() {
-      liff.logout()
-      window.location.reload()
-    }
+//     function logOut() {
+//       liff.logout()
+//       window.location.reload()
+//     }
 
-    function closed() {
-      liff.closeWindow()
-    }
+//     function closed() {
+//       liff.closeWindow()
+//     }
 
 //     async function scanCode() {
 //       const result = await liff.scanCodeV2()
 //         document.getElementById("scanCode").append(result.value)
 //     }
     
-    function openWindow() {
-      liff.openWindow({
-        url: "https://line.me",
-        external: true
-      })
-    }
+//     function openWindow() {
+//       liff.openWindow({
+//         url: "https://line.me",
+//         external: true
+//       })
+//     }
 
 //     async function getFriendship() {
 //       const friend = await liff.getFriendship()
@@ -119,9 +119,9 @@
       const profile = await liff.getProfile()
       document.getElementById("pictureUrl").src = profile.pictureUrl
       document.getElementById("userId").append(profile.userId)
-      document.getElementById("statusMessage").append(profile.statusMessage)
+      //document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
+      //document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
     
 //     function getEnvironment() {
