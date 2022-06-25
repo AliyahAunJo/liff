@@ -6,15 +6,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <p id="os"><b>OS:</b> </p>
+<!--   <p id="os"><b>OS:</b> </p>
   <p id="language"><b>Language:</b> </p>
   <p id="version"><b>Version:</b> </p>
   <p id="isInClient"><b>isInClient:</b> </p>
-  <p id="accessToken"><b>AccessToken:</b> </p>
+  <p id="accessToken"><b>AccessToken:</b> </p> -->
   <img id="pictureUrl">
   <p id="userId"><b>userId:</b> </p>
   <p id="displayName"><b>displayName:</b> </p>
-  <p id="statusMessage"><b>statusMessage:</b> </p>
+<!--   <p id="statusMessage"><b>statusMessage:</b> </p>
   <p id="decodedIDToken"><b>email:</b> </p>
   <p id="type"><b>type:</b> </p>
   <p id="viewType"><b>viewType:</b> </p>
@@ -33,7 +33,7 @@
   <button onclick="openWindow()">Open Window</button>
   <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
-  <button id="btnClose" onclick="closed()">Close</button>
+  <button id="btnClose" onclick="closed()">Close</button> -->
 
   <script src="js/vconsole.min.js"></script>
   <script>
@@ -107,11 +107,11 @@
 
     function getContext() {
       if (liff.getContext() != null) {
-        /*document.getElementById("type").append(liff.getContext().type)
+        document.getElementById("type").append(liff.getContext().type)
         document.getElementById("viewType").append(liff.getContext().viewType)
         document.getElementById("utouId").append(liff.getContext().utouId)
         document.getElementById("roomId").append(liff.getContext().roomId)
-        document.getElementById("groupId").append(liff.getContext().groupId)*/
+        document.getElementById("groupId").append(liff.getContext().groupId)
       }
     }
 
@@ -119,12 +119,12 @@
       const profile = await liff.getProfile()
       document.getElementById("pictureUrl").src = profile.pictureUrl
       document.getElementById("userId").append(profile.userId)
-      /*document.getElementById("statusMessage").append(profile.statusMessage)
+      document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)*/
+      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
     
-    /*function getEnvironment() {
+    function getEnvironment() {
       document.getElementById("os").append(liff.getOS())
       document.getElementById("language").append(liff.getLanguage())
       document.getElementById("version").append(liff.getVersion())
@@ -137,7 +137,7 @@
         document.getElementById("btnScanCode").style.display = "none"
         document.getElementById("btnClose").style.display = "none"
       }
-    }*/
+    }
 
     async function main() {
       liff.ready.then(() => {
